@@ -1,0 +1,29 @@
+public class RotateRight{
+    public static void main(String[]args){
+        int []arr={1,2,3,4,5,6,7};
+        int k=2;
+        int[] result = rotateRight(arr,k);
+        for(int i=0;i<arr.length;i++){
+            System.out.print(result[i] + " ");
+        }
+
+    }
+    public static int[]rotateRight(int []arr,int k){
+        int n = arr.length;
+        k= k % n;
+        
+        int[]temp=new int[arr.length];
+          for(int i=k;i< n;i++){
+            temp[i]=arr[i-k];
+         
+          }
+
+          for(int j=0;j<k;j++){
+            temp[j]=arr[n-k+j];
+          }
+          return temp;
+    }
+}
+
+
+//o/p:- 6,7,1,2,3,4,5

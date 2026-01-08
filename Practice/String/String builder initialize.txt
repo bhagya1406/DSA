@@ -1,0 +1,21 @@
+String builder initialize
+StringBuilder sb = new StringBuilder("abc");
+
+Methods
+
+1. append(String):- add string / any data type (add at end of string)
+sb.append("def") => "abcdef"
+2. insert(int index , string s):- add string at a given index
+sb.insert(1,"xyz") => "axyzbc"
+3. delete(int start , int end):- delete string from (start ind) to (last ind - 1) []=> including , ()=> excluding
+sb.delete(0,2) => "c"
+4. deletechatAt(index):- delete specific index character
+sb.deletecharAt(0) => "bc"
+5. reverse():- reverse a string
+sb.reverse() => "cba"
+6. setcharAt(index,character):- replace a character at a given index
+sb.setcharAt(0,z) => "zbc"
+7. .toString:- StringBuilder convert to string
+str s = sb.toString();
+8. .length():- length of a StringBuilder
+sb.length() => 3

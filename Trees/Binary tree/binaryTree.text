@@ -1,0 +1,29 @@
+Structure of a binary tree
+
+structure(Node = 10)           Structure(Node = 20)		Structure(Node = 30)		Structure(Node 40 , 50 , 60)
+(i) data => 10		       data => 20			data => 30			data => 40 , 50 , 60
+(ii) Node left => 	       Node left => 40			Node left => Null		Node left => null
+(iii) Node right => 30	       Node right => 50			Node right => 60		Node right => null
+
+types of binary tree
+
+(i) full binary tree => every node has 0 or 2 children. node never has 1 children
+(ii) complete binary tree => all levels except last level are completely filled i.e 2 children
+			     last field sodli tr sglyala 2 children astat.
+(iii) perfect binary tree => every node has compulsary 2 children.
+(iv) skewed binary tree => 1 node cha 1 children. Seen as a linkedlist
+
+Formula
+
+(i)number of nodes 		(ii)height of the tree => depth of the deepest node => number of edges
+at max level 2^l
+
+traversals
+DFS => using recursion => pre-order => root , left child , right child visit
+			  in-order => left child , root , right child visit
+			  post-order => left child , right child , root
+
+why binary tree (uses)
+(i) Expression evaluation
+
+

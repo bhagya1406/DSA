@@ -1,0 +1,72 @@
+String questions
+1. Count of vowels present in a string
+	String s = "abcdefg"
+	output = 2
+
+2. count of consonant present in a string
+	String s = "abcdefg"
+	output = 5
+
+3. count a digits present in a string
+	String s = "abc123def456"
+	output = 6
+
+4. check string is palindrome or not
+	String s = "madam" / "abcdcba"
+	output = true
+
+4. reverse a string using stringbuilder method (2 ways)
+	String = "abc"
+	outpu = "cba"
+	1st is sb.reverse()
+	2nd is sb.setchar()
+
+5. convert a string to uppercase
+	String = "abc"
+	output = "ABC"
+
+6. convert a string to lowercase
+	String = "ABC"
+	output = "abc"
+
+7. check string is anagram or not
+	String 1 = "listen"
+	String 2 = "silent"
+	output = true
+
+8. count frequency of character present in a string
+	String = "abcd"
+	output = a : 1 , b : 1 , c : 1 , d : 1  
+
+9. reverse a word present in a statement 
+	String s = "the sky is blue"
+	output = "eht yks si eulb"
+
+10. remove characters from one string present in another string
+	String 1 = "computer"
+	String 2 = "cat"
+	output = "ompuer"
+
+11. find the first repeated charcter
+	String s = "banana"
+	output = a
+
+12. check if string contains only digits
+	String s = "12345" / "vbh567"
+	output = true / false
+
+13. capitalize first letter of every word present in a statement
+	String s = "the sky is blue"
+	output = "The Sky Is Blue"
+
+14. Find the most frequent character
+	String s = "apple"
+	output = p
+
+15. count number of words in a sentense (2 ways)
+	String s = "the sky is blue"
+	output = 4
+
+16. remove extra spaces (2 ways)
+	String s = "the sky  is  blue"
+	output = "the sky is blue"

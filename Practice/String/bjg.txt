@@ -1,0 +1,353 @@
+// 									# DIGIT EXTRACTION #
+// # REVERSE NUMBER WITHOUT USING STRING #
+
+// import java.util.Scanner;
+
+// public class p1{
+// 	public static void main(String[] args) {
+// 		Scanner sc = new Scanner(System.in);
+// 		int a = sc.nextInt();
+//         int rev = 0;
+// 		int ans = reverse(a , rev);
+//         System.out.println(ans);
+// 	}
+
+// 	public static int reverse(int a , int rev){
+// 		while(a > 0){
+// 			int reminder = a%10;
+// 			rev = rev * 10 + reminder;
+// 			a = a/10;
+// 		}
+// 		return rev;
+// 	}
+// }
+
+// input : 1234
+// output : 4321
+
+
+
+
+
+
+
+
+// 										  #ARRAY#
+
+// # WHICH NUMBER IS NOT PRESENT IN SECOND ARRAY#
+
+// import java.util.Scanner;
+
+// public class p1{
+// 	public static void main(String[]args){
+// 		Scanner sc = new Scanner(System.in);
+// 		int a = sc.nextInt();
+// 		int[]arr = new int[a];
+// 		for(int i = 0 ; i<a ; i++){
+// 			arr[i] = sc.nextInt();
+// 		}
+
+// 		int b = sc.nextInt();
+// 		int[]arr1 = new int[b];
+// 		for(int i = 0 ; i<b ; i++){
+// 			arr1[i] = sc.nextInt();
+// 		}
+// 		sc.close();
+
+// 		number(arr , arr1);
+// 	}
+
+// 	public static void number(int[]arr , int[]arr1){
+// 		for(int i = 0 ; i<arr.length ; i++){
+// 			int a = arr[i];
+//             boolean found = false;
+// 			for(int j = 0 ; j<arr1.length; j++){
+// 				if(a == arr1[j]){
+//                     found = true;
+// 					break;
+// 				}
+// 			}
+//             if(!found){
+//                 System.out.println(a);
+//             }
+// 		}
+// 	}
+// }
+
+// input : arr=[1,2,3,4,5]
+// 	arr1=[2,3,1,0,5]
+// outpu : 4
+
+
+
+
+
+
+
+// 										# SUBARRAY #
+
+// # LONGEST SUBARRAY #
+// # FIND A CONTINUOUS SUBARRAY THAT ADDS TO A GIVEN NUMBER S AND RETURN LEFT AND RIGHT INDEX #
+
+// import java.util.Scanner;
+
+// public class p1{
+// 	public static void main(String[]args){
+// 		Scanner sc = new Scanner(System.in);
+// 		int N = sc.nextInt();
+// 		int S = sc.nextInt();
+// 		int[] arr = new int [N];
+// 		for(int i = 0 ; i<N ; i++){
+// 			arr[i] = sc.nextInt();
+// 		}
+//         sc.close();
+// 	subarray(N ,S , arr);
+// 	}
+
+// 	public static void subarray(int N,int S,int[]arr){
+// 	int sum = 0;
+//         int left = 0;
+//         int maxL = -1;
+//         int maxR = -1;
+//         int maxLen = 0;
+// 	for(int i = 0 ; i < N ; i++){
+// 		sum+= arr[i];
+//             	while(sum>S && left<=i){
+//                 	sum -= arr[left];
+//                 	left++;
+//             	}
+//             	if(sum == S){
+//                 	int len = i - left + 1; 
+//                 	if(len > maxLen){
+//                     		maxLen = len;
+//                     		maxL = left ;
+//                     		maxR = i;
+//                 	}
+//             	}
+// 	}
+
+//         if(maxLen == 0){
+//             System.out.println("-1");
+//         }else{
+//             System.out.println((maxL+1) + " " + (maxR+1));
+//         }
+// 	}
+// }
+
+// input: 	N=10
+// 	S=15
+// 	arr=[1,2,3,4,5,6,7,8,9,10]
+// output= 1 5
+
+
+
+
+// #ALL POSSIBLE OUTPUTS RETURN #
+// import java.util.Scanner;
+
+// public class p1{
+// 	public static void main(String[]args){
+// 		Scanner sc = new Scanner(System.in);
+// 		int N = sc.nextInt();
+// 		int S = sc.nextInt();
+// 		int[] arr = new int [N];
+// 		for(int i = 0 ; i<N ; i++){
+// 			arr[i] = sc.nextInt();
+// 		}
+//         	sc.close();
+// 		subarray(N ,S , arr);
+// 	}
+
+// 	public static void subarray(int N,int S,int[]arr){
+// 	int sum = 0;
+//         int left = 0;
+// 		for(int i = 0 ; i < N ; i++){
+// 			sum+= arr[i];
+//             		while(sum>S && left<=i){
+//                 		sum -= arr[left];
+//                 		left++;
+//             		}
+//             		if(sum == S){
+//                 		System.out.println(left+1);
+//                 		System.out.println(i+1);
+//             		}
+// 		}
+// 	}
+// }
+
+// input: 	N=10
+// 	S=15
+// 	arr=[1,2,3,4,5,6,7,8,9,10]
+// output: 1 5
+// 	4 6
+// 	7 8
+
+
+
+
+
+
+											// #PERMUTATION & COMBINATION#
+// #COMBINATION USING RECURSION#
+// # Generate the number of ways in which the given amount can be produced using the denominations of the coins available. There is no limits on the supply of any coin. #
+
+// import java.util.Scanner;
+
+// public class p1{
+// 	public static void main(String[]args){
+// 		Scanner sc = new Scanner(System.in);
+// 		int a = sc.nextInt();
+// 		int n = sc.nextInt();
+// 		int[]arr = new int[n];
+// 		for(int i = 0; i<n; i++){
+// 			arr[i] = sc.nextInt();
+// 		}
+// 		sc.close();
+// 		int index = arr.length;
+// 		int ans = ways(a , arr , index);
+// 		System.out.println(ans);
+// 	}
+
+// 	public static int ways(int a , int[]arr , int index){
+// 		if(a == 0){
+// 			return 1; // one valid found
+// 		}
+// 		if(a < 0 || index == 0){
+// 			return 0; // invalid case or no coins left
+// 		}
+
+// 		int include = ways(a-arr[index-1] ,arr , index);
+// 		int exclude = ways(a , arr , index-1);
+// 		return (include + exclude);
+// 	}
+// }
+
+
+
+
+
+
+
+									// #FROG JUMP OR CLIMBING STAIRS#
+
+// import java.util.Scanner;
+
+// public class p1{
+// 	public static void main(String[]args){
+// 		Scanner sc = new Scanner(System.in);
+// 		int a = sc.nextInt();
+// 		sc.close();
+// 		int ans = climb(a);
+// 		System.out.println(ans);
+// 	}
+
+// 	public static int climb(int a){
+// 		if(a == 0){
+// 			return 1;
+// 		}
+// 		if(a<0){
+// 			return 0;
+// 		}
+// 		return climb(a-1) + climb(a-2);
+// 	}
+// }
+
+
+
+
+
+
+
+										// #HOUSE ROBBER#
+
+// import java.util.Scanner;
+
+// public class p1{
+// 	public static void main(String[]args){
+// 		Scanner sc = new Scanner(System.in);
+// 		int n = sc.nextInt();
+// 		int[]arr = new int[n];
+// 		for(int i = 0 ; i<n ; i++){
+// 			arr[i] = sc.nextInt();
+// 		}
+// 		sc.close();
+// 		int index = 0;
+// 		int ans = robber(arr , index);
+// 		System.out.println(ans);
+// 	}
+
+// 	public static int robber(int[]arr , int index){
+// 		if(index >= arr.length){
+// 			return 0;
+// 		}
+// 		int take = arr[index] + robber(arr , index+2);
+// 		int skip = robber(arr , index+1);
+// 		return Math.max(take,skip);
+// 	}
+// }
+
+
+
+
+// 										#KADANES ALGORITHM#
+// #FIND MAX SUBARRAY SUM#
+
+// import java.util.Scanner;
+
+// public class p1{
+// 	public static void main(String[]args){
+// 		Scanner sc = new Scanner(System.in);
+// 		int n = sc.nextInt();
+// 		int[]arr = new int[n];
+// 		for(int i = 0 ; i<n ; i++){
+// 			arr[i] = sc.nextInt();
+// 		}
+// 		sc.close();
+// 		int ans = sum(arr);
+// 		System.out.println(ans);
+// 	}
+
+// 	public static int sum(int[]arr){
+// 		int cur = arr[0];
+// 		int max = arr[0];
+// 		for(int i = 0 ; i<arr.length ; i++){
+// 			cur= Math.max(i , cur+i);
+// 			max = Math.max(max,cur);
+// 		}
+// 		return max;
+// 	}
+// }
+
+//  						#Longest Substring Without Repeating Characters#
+
+import java.util.HashSet;
+import java.util.Scanner;
+
+public class p1{
+	public static void main(String[]args){
+		Scanner sc = new Scanner(System.in);
+		String s = sc.nextLine();
+		sc.close();
+		int ans = longestSubstring(s);
+		System.out.println(ans);
+	}
+
+	public static int longestSubstring(String s){
+		HashSet<Character> set = new HashSet<>();
+		int maxL = 0;
+		int start = 0;
+		int end = 0;
+		while(end<s.length()){
+			char c = s.charAt(end);
+			if(!set.contains(c)){
+				set.add(c);
+				end++;
+				maxL=Math.max(maxL , end-start);
+			}else{
+				set.remove(s.charAt(start));
+				start++;
+			}
+		}
+		return maxL;
+	}
+}
